@@ -12,35 +12,32 @@ This combos are future-proof, any further updates will only introduce more combo
 
 ## Combo Landscape:
 
-
-
-
-| Primary Input | PS | XBOX |
+| Primary Input | PS | XBOX | recommended main usage w/o modifier|
 | - | - | - |
-| primary fire | R1 | RS |
-| "C" (secondary fire) | L1 | LS |
-| Right-Hand lower hat | Digital Pad UP/DOWN/LEFT/RIGHT | Digital Pad UP/DOWN/LEFT/RIGHT |
-| Button "E" | SQUARE | X |
-| Button "D" | CROSS | A |
-| Button "I" | CIRCLE | B |
-| throttle pointer finger hat UP | R2 | RT |
-| throttle pointer finger hat DOWN | L2 | LT |
-| throttle pointer finger hat LEFT | L1 | LB |
-| throttle pointer finger hat RIGHT | R1 | RB |
+| right hand finger trigger | R1 | RS |primary fire|
+| "C"  | L1 | LS |secondary fire|
+| Right-Hand lower hat | Digital Pad UP/DOWN/LEFT/RIGHT | Digital Pad UP/DOWN/LEFT/RIGHT | standard Digital PAd functions/ PIPs|
+| Button "E" | SQUARE | X |modifier X|
+| Button "D" | CROSS | A |modifier A|
+| Button "I" | CIRCLE | B |modifier B|
+| throttle pointer finger hat UP | R2 | RT |Thruster |
+| throttle pointer finger hat DOWN | L2 | LT |Thruster |
+| throttle pointer finger hat LEFT | L1 | LB |Thruster |
+| throttle pointer finger hat RIGHT | R1 | RB |Thruster |
 
 
-| COMBOs | PS | XBOX |
+| COMBOs | PS | XBOX | recommended main usage w/o modifier|
 | - | - | - |
-| "Righthand upper hat UP" | L3+Digital Pad UP | LS+Digital Pad UP |
-| "Righthand upper hat DOWN" | L3+Digital Pad DOWN | LS+Digital Pad DOWN |
-| "Righthand upper hat LEFT" | L3+Digital Pad LEFT | LS+Digital Pad LEFT |
-| "Righthand upper hat RIGHT" | L3+Digital Pad RIGHT | LS+Digital Pad RIGHT |
-| "A" | L1+R1+Digital Pad RIGHT | LB+RB+Digital Pad RIGHT |
-| "B" | L1+R1+Digital Pad DOWN | LB+RB+Digital Pad DOWN |
-| "FIRE" | L1+R1+Digital Pad UP | LB+RB+Digital Pad UP |
-| pinky trigger | not yet implemented by CTuner team |   |
-| headlook (right middle finger scroll wheel press) | R3+Triangle | RS+Y |
-| Scroll Wheel UP/DOWN | not yet implemented by CTuner team |   |
+| "Righthand upper hat UP" | L3+Digital Pad UP | LS+Digital Pad UP |Sensor increase|
+| "Righthand upper hat DOWN" | L3+Digital Pad DOWN | LS+Digital Pad DOWN |Sensor decrease|
+| "Righthand upper hat LEFT" | L3+Digital Pad LEFT | LS+Digital Pad LEFT |Previous Weapon|
+| "Righthand upper hat RIGHT" | L3+Digital Pad RIGHT | LS+Digital Pad RIGHT |Next Weapon|
+| "A" | L1+R1+Digital Pad RIGHT | LB+RB+Digital Pad RIGHT |Target Ahead|
+| "B" | L1+R1+Digital Pad DOWN | LB+RB+Digital Pad DOWN |Flight Assist on/off|
+| "FIRE" | L1+R1+Digital Pad UP | LB+RB+Digital Pad UP |HardPoints|
+| pinky trigger | not yet implemented by CTuner team |   |possibly FlightAssist in future|
+| right middle finger scroll wheel press | R3+Triangle | RS+Y |headlook|
+| Scroll Wheel UP/DOWN | not yet implemented by CTuner team |   |possibly weapons in future|
 | "T1" | Square+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad LEFT |
 | "T2" | Square+L1+R1+Digital Pad UP | X+LB+RB+Digital Pad UP |
 | "T3" | Square+L1+R1+Digital Pad RIGHT | X+LB+RB+Digital Pad RIGHT |
