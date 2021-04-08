@@ -46,4 +46,4 @@ This combos are future-proof, any further updates will only introduce more combo
 | "T5" | Circle+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad LEFT ||
 | "T6" | Circle+L1+R1+Digital Pad UP | X+LB+RB+Digital Pad UP ||
 
-https://miro.medium.com/max/1890/1*g8RhxUb9MDp_Ar002R6agQ.jpeg
+![](https://miro.medium.com/max/1890/1*g8RhxUb9MDp_Ar002R6agQ.jpeg)
