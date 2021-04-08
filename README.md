@@ -2,7 +2,7 @@
 
 a script to enhance the usage of the Saitek/Logitech X52(pro) through TITAN on consoles
 
-## Version 1.1.31:
+## Version 1.31:
 
 This version had been completely rebuilt based on the change of HID input on GTuner, and also incorporates cross-platform capabilities (XB/PS).
 
