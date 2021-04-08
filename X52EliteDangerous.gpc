@@ -1,0 +1,337 @@
+//X52EliteDangerous.gpc
+//check the docs & forum
+
+//requirement: Titan2 version 1.1.3.1 (if you are not sure, check the Changelog of TITAN/update your titan to the latest release) 
+
+#pragma METAINFO("X52 Elite Dangerous for XBOX/PS", 1, 31 ,"PhillowAT")
+#include <remapper.gph>
+
+bool bACCEL1Z;
+bool bACCEL2Z;
+
+//-----------------------Timers-----------------------------
+#define tDelayBtn 70			// delay between following button events
+#define tDelayBtnrelease 120	//delay till release
+//------------------------remapping--------------------------
+const uint8 X52buttonSwap[43] = {
+    RMP_USB_A, 
+    BUTTON_1,  BUTTON_2,  BUTTON_3,  BUTTON_4,  BUTTON_5,  BUTTON_6,  BUTTON_7, 
+    BUTTON_8,  BUTTON_9,  BUTTON_10, BUTTON_11, BUTTON_12, BUTTON_13, BUTTON_14, 
+    BUTTON_16, BUTTON_15, BUTTON_17, BUTTON_18, BUTTON_19, BUTTON_20, BUTTON_21, 
+    STICK_1_X, STICK_1_Y, STICK_2_X, STICK_2_Y, 
+    POINT_1_X, POINT_1_Y, POINT_2_X, POINT_2_Y, 
+    ACCEL_1_X, ACCEL_1_Y, ACCEL_1_Z, ACCEL_2_X, ACCEL_2_Y, ACCEL_2_Z, 
+    GYRO_1_X,  GYRO_1_Y,  GYRO_1_Z,
+    PADDLE_1,  PADDLE_2,  PADDLE_3,  PADDLE_4
+};
+init {
+    // swap buttons 15 and 16
+    remapper(X52buttonSwap);
+	//remapper_disable(POINT_2_X);
+}
+//------------------------MAIN------------------------------
+main {						//***channel reset & Joystick upper Hat
+	
+						//set Paddle & rotary output to 0
+  	if(get_val(POINT_1_X)) {
+		set_val(POINT_1_X, 0);
+    }
+  	if(get_val(POINT_1_Y)) {
+		set_val(POINT_1_Y, 0);
+    }
+  	if(get_val(POINT_2_X)) {
+		set_val(POINT_2_X, 0);
+    }
+
+  	if(get_val(PADDLE_1)) {
+		set_val(PADDLE_1, 0);
+    }
+  	if(get_val(PADDLE_2)) {
+		set_val(PADDLE_2, 0);
+    }		
+  	if(get_val(PADDLE_3)) {
+		set_val(PADDLE_3, 0);
+    }	
+  	if(get_val(PADDLE_4)) {
+		set_val(PADDLE_4, 0);
+    }	
+
+						//mainclass for Joystick upper hat
+	 if(get_val(ACCEL_1_Z)) {
+		if (!bACCEL1Z) {
+			bACCEL1Z = TRUE;
+			set_val(ACCEL_1_Z, 0);
+			combo_run(POV_Hat2_left_on);
+			}
+		} else {
+			bACCEL1Z = FALSE;
+	}
+  	if(event_active(ACCEL_1_X)) {
+		set_val(ACCEL_1_X, 0);
+		combo_run(POV_Hat2_up_on);
+    }
+  	if(event_active(ACCEL_2_X)) {
+		set_val(ACCEL_2_X, 0);
+		combo_run(POV_Hat2_right_on);
+	}	
+  	if(event_active(ACCEL_1_Y)) {
+		set_val(ACCEL_1_Y, 0);
+		combo_run(POV_Hat2_down_on);
+    }
+  }
+combo POV_Hat2_left_on {	//XBO: LS+DPAD_L, PS:L3+DPAD_L
+	set_val(BUTTON_9, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_9, 100);
+	set_val(BUTTON_12, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_12, 0);	
+	set_val(BUTTON_9, 0);
+}
+combo POV_Hat2_up_on {		//XBO: LS+DPAD_U, PS:L3+DPAD_U
+	set_val(BUTTON_9, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_9, 100);
+	set_val(BUTTON_10, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_9, 0);	
+	set_val(BUTTON_10, 0);
+}
+combo POV_Hat2_right_on {	//XBO: LS+DPAD_R, PS:L3+DPAD_R
+	set_val(BUTTON_9, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_9, 100);
+	set_val(BUTTON_13, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_13, 0);	
+	set_val(BUTTON_9, 0);
+}
+combo POV_Hat2_down_on {	//XBO: LS+DPAD_D, PS:L3+DPAD_D
+	set_val(BUTTON_9, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_9, 100);
+	set_val(BUTTON_11, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_9, 0);	
+	set_val(BUTTON_11, 0);
+}
+main {						//***main class for Joystick side buttons
+
+  	if(event_active(BUTTON_21)) { // "Fire" Button
+		set_val(BUTTON_21, 0);
+		combo_run(Fire_on);
+    }
+  	if(event_active(GYRO_1_Y)) { // "A" Button
+		set_val(GYRO_1_Y, 0);
+		combo_run(A_on);
+     }
+  	if(event_active(GYRO_1_X)) { // "B" Button
+		set_val(GYRO_1_X, 0);
+		combo_run(B_on);
+     }
+ }
+combo Fire_on {				//XBO: LB+RB+DPAD_U, PS:L1+R1+DPAD_U
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_10, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_10, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_7, 0);
+}
+combo A_on {				//XBO: LB+RB+DPAD_R, PS:L1+R1+DPAD_R
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_13, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_13, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_7, 0);
+}
+combo B_on {				//XBO: LB+RB+DPAD_D, PS:L1+R1+DPAD_D
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_11, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_11, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_7, 0);
+}
+main { 						//***Thruster Scroll_wheel_btn ---HEADLOCK---
+
+	
+	if(get_actual(POINT_2_Y)) {	//XBO: RS+Y, PS:R3+Triangle
+		set_val(POINT_2_Y, 0);		
+		set_val(BUTTON_6, 100);
+		set_val(BUTTON_14, 100);
+     }
+ }
+main { 						//***mainclass for "T" Buttons on Joystick
+  	if(event_active(GYRO_1_Z)) { //T1
+		set_val(GYRO_1_Z, 0);
+		combo_run(T1_on);
+    }
+	 if(get_val(ACCEL_2_Z)) {
+		if (!bACCEL2Z) {
+			bACCEL2Z = TRUE;
+			set_val(ACCEL_2_Z, 0);
+			combo_run(T3_on);
+			}
+		} else {
+			bACCEL2Z = FALSE;
+	}
+  	if(event_active(BUTTON_18)) { //T3
+		set_val(BUTTON_18, 0);
+		combo_run(T3_on);
+    }
+  	if(event_active(BUTTON_19)) { //T4
+		set_val(BUTTON_19, 0);
+		combo_run(T4_on);
+    }
+  	if(event_active(ACCEL_2_Y)) { //T5
+		set_val(ACCEL_2_Y, 0);
+		combo_run(T5_on);
+    }
+  	if(event_active(BUTTON_20)) { //T6
+		set_val(BUTTON_20, 0);
+		combo_run(T6_on);
+    }
+  }
+combo T1_on {  				//XBO: X+LB+RB+DPAD_L, PS: SQUARE+L1+R1+DPAD_L
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_12, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_7, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_17, 0);
+	set_val(BUTTON_12, 0);
+
+}
+combo T2_on {  				//XBO: X+LB+RB+DPAD_U, PS: SQUARE+L1+R1+DPAD_U
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_10, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_7, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_17, 0);
+	set_val(BUTTON_10, 0);
+}
+combo T3_on {  				//XBO: X+LB+RB+DPAD_R, PS: SQUARE+L1+R1+DPAD_R
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_13, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_7, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_17, 0);
+	set_val(BUTTON_13, 0);
+}
+combo T4_on {  				//XBO: X+LB+RB+DPAD_D, PS: SQUARE+L1+R1+DPAD_D
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_17, 100);
+	set_val(BUTTON_11, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_7, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_17, 0);
+	set_val(BUTTON_11, 0);
+}
+combo T5_on {  				//XBO: B+LB+RB+DPAD_L, PS: CIRCLE+L1+R1+DPAD_L
+	set_val(BUTTON_7, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_16, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_16, 100);
+	set_val(BUTTON_13, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_13, 0);
+	wait(tDelayBtn);
+	set_val(BUTTON_16, 0);
+	wait(tDelayBtn);
+	set_val(BUTTON_4, 0);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 0);
+}
+combo T6_on {  				//XBO: B+LB+RB+DPAD_U, PS: CIRCLE+L1+R1+DPAD_U
+	set_val(BUTTON_16, 100);
+	wait(tDelayBtn);	
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_16, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_16, 100);
+	wait(tDelayBtn);
+	set_val(BUTTON_7, 100);
+	set_val(BUTTON_4, 100);
+	set_val(BUTTON_16, 100);
+	set_val(BUTTON_10, 100);
+	wait(tDelayBtnrelease);
+	set_val(BUTTON_7, 0);
+	set_val(BUTTON_4, 0);
+	set_val(BUTTON_17, 0);	
+}
