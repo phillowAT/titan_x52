@@ -38,9 +38,9 @@ This combos are future-proof, any further updates will only introduce more combo
 | pinky trigger | not yet implemented by CTuner team |   |possibly FlightAssist in future|
 | right middle finger scroll wheel press | R3+Triangle | RS+Y |headlook|
 | Scroll Wheel UP/DOWN | not yet implemented by CTuner team |   |possibly weapons in future|
-| "T1" | Square+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad LEFT |
-| "T2" | Square+L1+R1+Digital Pad UP | X+LB+RB+Digital Pad UP |
-| "T3" | Square+L1+R1+Digital Pad RIGHT | X+LB+RB+Digital Pad RIGHT |
-| "T4" | Square+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad DOWN |
-| "T5" | Circle+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad LEFT |
-| "T6" | Circle+L1+R1+Digital Pad UP | X+LB+RB+Digital Pad UP |
+| "T1" | Square+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad LEFT ||
+| "T2" | Square+L1+R1+Digital Pad UP | X+LB+RB+Digital Pad UP ||
+| "T3" | Square+L1+R1+Digital Pad RIGHT | X+LB+RB+Digital Pad RIGHT ||
+| "T4" | Square+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad DOWN ||
+| "T5" | Circle+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad LEFT ||
+| "T6" | Circle+L1+R1+Digital Pad UP | X+LB+RB+Digital Pad UP ||
