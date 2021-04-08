@@ -16,10 +16,11 @@ This combos are future-proof, any further updates will only introduce more combo
 | - | - | - | - |
 | right hand finger trigger | R1 | RS |primary fire|
 | "C"  | L1 | LS |secondary fire|
-| Right-Hand lower hat | Digital Pad UP/DOWN/LEFT/RIGHT | Digital Pad UP/DOWN/LEFT/RIGHT | standard Digital PAd functions/ PIPs|
-| Button "E" | SQUARE | X |modifier X|
-| Button "D" | CROSS | A |modifier A|
-| Button "I" | CIRCLE | B |modifier B|
+| Right-Hand lower hat | Digital Pad UP/DOWN/LEFT/RIGHT | Digital Pad UP/DOWN/LEFT/RIGHT | standard Digital Pad functions/ PIPs|
+| Button "E" | SQUARE | X |modifier|
+| Button "D" | CROSS | A |modifier|
+| Button "I" | CIRCLE | B |modifier|
+|mouse button| TRIANGLE | Y | modifier|
 | throttle pointer finger hat UP | R2 | RT |Thruster |
 | throttle pointer finger hat DOWN | L2 | LT |Thruster |
 | throttle pointer finger hat LEFT | L1 | LB |Thruster |
@@ -44,3 +45,5 @@ This combos are future-proof, any further updates will only introduce more combo
 | "T4" | Square+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad DOWN ||
 | "T5" | Circle+L1+R1+Digital Pad LEFT | X+LB+RB+Digital Pad LEFT ||
 | "T6" | Circle+L1+R1+Digital Pad UP | X+LB+RB+Digital Pad UP ||
+
+https://miro.medium.com/max/1890/1*g8RhxUb9MDp_Ar002R6agQ.jpeg
