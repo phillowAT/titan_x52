@@ -13,7 +13,7 @@ This combos are future-proof, any further updates will only introduce more combo
 ## Combo Landscape:
 
 | Primary Input | PS | XBOX | recommended main usage w/o modifier|
-| - | - | - |
+| - | - | - | - |
 | right hand finger trigger | R1 | RS |primary fire|
 | "C"  | L1 | LS |secondary fire|
 | Right-Hand lower hat | Digital Pad UP/DOWN/LEFT/RIGHT | Digital Pad UP/DOWN/LEFT/RIGHT | standard Digital PAd functions/ PIPs|
@@ -27,7 +27,7 @@ This combos are future-proof, any further updates will only introduce more combo
 
 
 | COMBOs | PS | XBOX | recommended main usage w/o modifier|
-| - | - | - |
+| - | - | - | - |
 | "Righthand upper hat UP" | L3+Digital Pad UP | LS+Digital Pad UP |Sensor increase|
 | "Righthand upper hat DOWN" | L3+Digital Pad DOWN | LS+Digital Pad DOWN |Sensor decrease|
 | "Righthand upper hat LEFT" | L3+Digital Pad LEFT | LS+Digital Pad LEFT |Previous Weapon|
