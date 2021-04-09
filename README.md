@@ -12,7 +12,7 @@ This combos now are future-proof, any further updates will only introduce more c
 
 ## Combo Landscape:
 
-| Primary Input | PS | XBOX | recommended main usage w/o modifier|
+| Primary Input | PS | XBOX | recommended main usage without modifier|
 | - | - | - | - |
 | right hand finger trigger | R1 | RS |primary fire|
 | "C"  | L1 | LS |secondary fire|
@@ -27,7 +27,7 @@ This combos now are future-proof, any further updates will only introduce more c
 | throttle pointer finger hat RIGHT | R1 | RB |Thruster |
 
 
-| COMBOs | PS | XBOX | recommended main usage w/o modifier|
+| COMBOs | PS | XBOX | recommended main usage without modifier|
 | - | - | - | - |
 | "Righthand upper hat UP" | L3+Digital Pad UP | LS+Digital Pad UP |Sensor increase|
 | "Righthand upper hat DOWN" | L3+Digital Pad DOWN | LS+Digital Pad DOWN |Sensor decrease|
