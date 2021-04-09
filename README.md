@@ -8,7 +8,7 @@ This version had been completely rebuilt based on the change of HID input on GTu
 
 As such, it does introduce a breaking change from previous, as the combos on PS will change from Touchpad to e.g.: L3+R3+Digital_Pad_UP.
 
-This combos are future-proof, any further updates will only introduce more combo´s of that kind, but existing ones wont change anymore.
+This combos now are future-proof, any further updates will only introduce more combo´s of that kind, but existing ones wont change anymore.
 
 ## Combo Landscape:
 
